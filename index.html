@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinesh Kumar S | AI Student | Data Analyst | Microsoft Technologist</title>
+  <meta name="description" content="Premium personal portfolio for Dinesh Kumar S, an AI student, data analyst, and Microsoft technologist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__text">Loading portfolio</div>
+  </div>
+
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Go to home">DKS</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero__content reveal">
+        <p class="eyebrow">AI Student | Data Analyst | Microsoft Technologist</p>
+        <h1>Hi, I'm Dinesh Kumar S</h1>
+        <p class="hero__tagline">Building intelligent systems, automating workflows, and turning data into actionable insights.</p>
+        <p class="hero__intro">I specialize in data analytics, AI-driven solutions, and business automation using Microsoft technologies, Python, and cloud platforms.</p>
+        <div class="hero__typewrap">
+          <span class="hero__type-label">Focus areas</span>
+          <span class="hero__type" id="typing-text" aria-live="polite"></span>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <button class="btn btn--ghost" id="resume-btn" type="button">Download Resume</button>
+        </div>
+        <div class="hero__meta">
+          <span>Coimbatore, India</span>
+          <span>Available for freelance, internships, and collaborations</span>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="glass-card glass-card--hero">
+          <div class="glass-card__header">
+            <span class="status-dot"></span>
+            <span>Portfolio Overview</span>
+          </div>
+          <div class="hero__profile">
+            <div class="hero__avatar">DKS</div>
+            <div>
+              <h2>Dinesh Kumar S</h2>
+              <p>AI Student | Data Analyst | Microsoft Technologist</p>
+            </div>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <strong>7-8</strong>
+              <span>developers led</span>
+            </div>
+            <div class="stat-card">
+              <strong>30%</strong>
+              <span>delivery alignment gain</span>
+            </div>
+            <div class="stat-card">
+              <strong>25-40%</strong>
+              <span>manual process reduction</span>
+            </div>
+            <div class="stat-card">
+              <strong>4+</strong>
+              <span>core domains</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <div class="section__heading">
+        <span class="section__label">About</span>
+        <h2>Engineering-focused, business-aware, and automation-first.</h2>
+      </div>
+      <div class="glass-panel">
+        <p>I am a B.Tech student in Artificial Intelligence and Data Science with hands-on experience in real-world industry projects. I have worked as a Data Analyst Intern and Power Platform Developer Intern, and currently lead a development team delivering solutions for international clients. My focus is on building scalable, data-driven systems and automating business processes.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <div class="section__heading">
+        <span class="section__label">Skills</span>
+        <h2>Technical depth across data, automation, cloud, and delivery.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="glass-panel skill-block">
+          <h3>Programming</h3>
+          <ul class="skill-list">
+            <li><span>Python</span><div class="skill-bar"><i style="--value: 94%"></i></div></li>
+            <li><span>SQL</span><div class="skill-bar"><i style="--value: 90%"></i></div></li>
+            <li><span>Java (Basic)</span><div class="skill-bar"><i style="--value: 62%"></i></div></li>
+          </ul>
+        </article>
+        <article class="glass-panel skill-block">
+          <h3>Data & Analytics</h3>
+          <ul class="skill-list">
+            <li><span>Power BI</span><div class="skill-bar"><i style="--value: 92%"></i></div></li>
+            <li><span>Tableau</span><div class="skill-bar"><i style="--value: 82%"></i></div></li>
+            <li><span>Excel / Pandas / NumPy</span><div class="skill-bar"><i style="--value: 88%"></i></div></li>
+          </ul>
+        </article>
+        <article class="glass-panel skill-block">
+          <h3>Microsoft Technologies</h3>
+          <ul class="skill-list">
+            <li><span>Power Apps</span><div class="skill-bar"><i style="--value: 90%"></i></div></li>
+            <li><span>Power Automate</span><div class="skill-bar"><i style="--value: 88%"></i></div></li>
+            <li><span>SharePoint</span><div class="skill-bar"><i style="--value: 84%"></i></div></li>
+          </ul>
+        </article>
+        <article class="glass-panel skill-block">
+          <h3>Backend & APIs</h3>
+          <ul class="skill-list">
+            <li><span>FastAPI</span><div class="skill-bar"><i style="--value: 86%"></i></div></li>
+            <li><span>REST API Development</span><div class="skill-bar"><i style="--value: 87%"></i></div></li>
+          </ul>
+        </article>
+        <article class="glass-panel skill-block">
+          <h3>Cloud</h3>
+          <ul class="skill-list">
+            <li><span>Google Cloud Platform</span><div class="skill-bar"><i style="--value: 78%"></i></div></li>
+            <li><span>Microsoft Azure</span><div class="skill-bar"><i style="--value: 80%"></i></div></li>
+            <li><span>Firebase</span><div class="skill-bar"><i style="--value: 76%"></i></div></li>
+          </ul>
+        </article>
+        <article class="glass-panel skill-block">
+          <h3>Tools & Soft Skills</h3>
+          <ul class="skill-list">
+            <li><span>Git / GitHub / VS Code</span><div class="skill-bar"><i style="--value: 90%"></i></div></li>
+            <li><span>Selenium / Playwright</span><div class="skill-bar"><i style="--value: 83%"></i></div></li>
+            <li><span>Leadership / Communication / Problem Solving</span><div class="skill-bar"><i style="--value: 95%"></i></div></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="experience">
+      <div class="section__heading">
+        <span class="section__label">Experience</span>
+        <h2>Delivery, automation, and client-facing impact.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item glass-panel">
+          <span class="timeline-item__role">Lead Developer</span>
+          <h3>DoMore Tech Consultancy Services</h3>
+          <ul>
+            <li>Led a team of 7-8 developers for US-based clients</li>
+            <li>Improved delivery alignment by 30%</li>
+            <li>Reduced manual processes by 25-40% using automation</li>
+            <li>Used Azure DevOps for lifecycle management</li>
+          </ul>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="timeline-item__role">Data Analyst Intern</span>
+          <h3>Choleric Conference</h3>
+          <ul>
+            <li>Performed data cleaning and validation using Excel</li>
+            <li>Built Power BI dashboards</li>
+            <li>Automated processes using Selenium</li>
+          </ul>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="timeline-item__role">Developer Intern - Power Platform</span>
+          <h3>ELGi Equipments</h3>
+          <ul>
+            <li>Built solutions using Power Apps, Power Automate, and SharePoint</li>
+            <li>Automated workflows and improved efficiency</li>
+          </ul>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="timeline-item__role">Microsoft Learn Student Ambassador (LEAD)</span>
+          <h3>Community Leadership</h3>
+          <ul>
+            <li>Mentored students globally</li>
+            <li>Conducted workshops and technical sessions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="section__heading">
+        <span class="section__label">Projects</span>
+        <h2>Practical systems with business value and technical clarity.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card glass-panel">
+          <div class="project-card__accent"></div>
+          <span class="project-card__tag">Logistics Platform</span>
+          <h3>Nexport</h3>
+          <p>Built a digital logistics platform connecting exporters and freight services with shipment tracking, document management, and real-time updates.</p>
+          <a class="project-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub link</a>
+        </article>
+        <article class="project-card glass-panel">
+          <div class="project-card__accent"></div>
+          <span class="project-card__tag">AI Route Optimization</span>
+          <h3>Wayflare</h3>
+          <p>AI-based route optimization system with real-time traffic insights and tracking, built using Python, APIs, and cloud services.</p>
+          <a class="project-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub link</a>
+        </article>
+        <article class="project-card glass-panel">
+          <div class="project-card__accent"></div>
+          <span class="project-card__tag">Machine Learning</span>
+          <h3>Predictions Suite</h3>
+          <p>Titanic survival prediction using ML algorithms and sales forecasting using regression and time series techniques.</p>
+          <a class="project-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub link</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="services">
+      <div class="section__heading">
+        <span class="section__label">Services</span>
+        <h2>Focused services for analytics, automation, and product delivery.</h2>
+      </div>
+      <div class="service-row">
+        <div class="service-pill glass-panel">Data Analysis & Dashboard Development</div>
+        <div class="service-pill glass-panel">Power Platform Automation Solutions</div>
+        <div class="service-pill glass-panel">Web Development for Portfolio & Business Sites</div>
+        <div class="service-pill glass-panel">API Development & Backend Services</div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="section__heading">
+        <span class="section__label">Contact</span>
+        <h2>Open to freelance opportunities, internships, and collaborations.</h2>
+      </div>
+      <div class="contact-grid">
+        <form class="glass-panel contact-form">
+          <div class="field-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Tell me about your project or opportunity" required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Send Message</button>
+        </form>
+        <aside class="glass-panel contact-card">
+          <h3>Let's build something useful.</h3>
+          <p>I design and ship systems that improve reporting, automate operations, and turn complex work into repeatable workflows.</p>
+          <div class="contact-card__stats">
+            <div>
+              <strong>Coimbatore</strong>
+              <span>India</span>
+            </div>
+            <div>
+              <strong>Response</strong>
+              <span>Within 24 hours</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scroll-top" type="button" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
