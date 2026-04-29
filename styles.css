@@ -369,8 +369,49 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
-  color: rgba(214, 223, 255, 0.65);
+  color: rgba(230, 230, 230, 0.56);
   font-size: 0.95rem;
+}
+
+.hero__media {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #07070d;
+  border: 1px solid rgba(0, 245, 255, 0.06);
+}
+
+.hero__media-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  animation: floatImage 8s ease-in-out infinite;
+}
+
+.hero__media-badge {
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(10, 10, 15, 0.72);
+  border: 1px solid rgba(0, 245, 255, 0.12);
+  color: var(--text);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+}
+
+.hero__media-badge--top {
+  top: 1rem;
+  left: 1rem;
+}
+
+.hero__media-badge--bottom {
+  right: 1rem;
+  bottom: 1rem;
 }
 
 .showcase-card {
@@ -406,8 +447,8 @@ main {
   flex-shrink: 0;
   padding: 0.85rem 1.05rem;
   border-radius: 999px;
-  background: rgba(0, 245, 255, 0.08);
-  border: 1px solid rgba(0, 245, 255, 0.18);
+  background: rgba(0, 245, 255, 0.05);
+  border: 1px solid rgba(0, 245, 255, 0.12);
   color: var(--text);
 }
 
@@ -420,8 +461,8 @@ main {
 .showcase-card__panel {
   padding: 1.25rem;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(5, 10, 16, 0.8), rgba(8, 12, 20, 0.95));
-  border: 1px solid rgba(0, 245, 255, 0.08);
+  background: linear-gradient(180deg, rgba(5, 10, 16, 0.76), rgba(8, 12, 20, 0.96));
+  border: 1px solid rgba(0, 245, 255, 0.06);
 }
 
 .showcase-card__aside {
@@ -435,7 +476,7 @@ main {
   padding: 1rem 1.05rem;
   border-radius: 22px;
   background: rgba(230, 230, 230, 0.03);
-  border: 1px solid rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.06);
 }
 
 .showcase-card__note span {
@@ -481,7 +522,7 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(140deg, rgba(255, 255, 255, 0.12), transparent 38%, transparent 68%, rgba(255, 255, 255, 0.05));
-  opacity: 0.32;
+  opacity: 0.18;
   pointer-events: none;
 }
 
@@ -519,7 +560,7 @@ main {
   color: #0a0a0f;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
-  box-shadow: 0 14px 28px rgba(0, 245, 255, 0.14);
+  box-shadow: 0 12px 22px rgba(0, 245, 255, 0.08);
 }
 
 .hero__profile h2,
@@ -546,7 +587,7 @@ main {
   padding: 1rem;
   border-radius: 18px;
   background: rgba(230, 230, 230, 0.03);
-  border: 1px solid rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.06);
 }
 
 .stat-card strong {
@@ -606,17 +647,17 @@ main {
   padding: 0.72rem 1rem;
   border-radius: 999px;
   color: var(--text);
-  border: 1px solid rgba(0, 245, 255, 0.14);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(138, 43, 226, 0.06));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 245, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(138, 43, 226, 0.04));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   letter-spacing: 0.01em;
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 245, 255, 0.34);
-  box-shadow: 0 10px 24px rgba(0, 245, 255, 0.08);
+  border-color: rgba(0, 245, 255, 0.24);
+  box-shadow: 0 10px 18px rgba(0, 245, 255, 0.06);
 }
 
 .timeline {
@@ -642,8 +683,28 @@ main {
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.015);
-  border-color: rgba(0, 245, 255, 0.32);
-  box-shadow: 0 18px 52px rgba(0, 245, 255, 0.1), 0 16px 54px rgba(0, 0, 0, 0.44);
+  border-color: rgba(0, 245, 255, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 245, 255, 0.08), 0 14px 40px rgba(0, 0, 0, 0.38);
+}
+
+.project-card__media {
+  margin: 0 0 1rem;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #07070d;
+  border: 1px solid rgba(0, 245, 255, 0.06);
+}
+
+.project-card__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.05);
 }
 
 .project-card__accent {
@@ -652,7 +713,7 @@ main {
   margin-bottom: 1rem;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
-  box-shadow: 0 0 14px rgba(0, 245, 255, 0.18);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.08);
 }
 
 .project-card p {
@@ -672,7 +733,7 @@ main {
 
 .project-link:hover {
   border-color: rgba(0, 245, 255, 0.55);
-  box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.14), 0 8px 18px rgba(0, 245, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.12), 0 8px 18px rgba(0, 245, 255, 0.06);
 }
 
 .service-row {
@@ -745,7 +806,7 @@ textarea:focus {
 .contact-card__stats div {
   padding: 1rem;
   border-radius: 18px;
-  border: 1px solid rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.06);
   background: rgba(230, 230, 230, 0.03);
 }
 
@@ -801,6 +862,11 @@ textarea:focus {
 @keyframes floatGlow {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   50% { transform: translate3d(0, 18px, 0) scale(1.08); }
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: scale(1.02) translateY(0); }
+  50% { transform: scale(1.04) translateY(-8px); }
 }
 
 @keyframes spin {
@@ -906,6 +972,10 @@ textarea:focus {
   .showcase-card__top {
     flex-direction: column;
     align-items: start;
+  }
+
+  .hero__media-badge--bottom {
+    bottom: 0.75rem;
   }
 
   .skills-grid {
