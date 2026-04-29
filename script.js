@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const particleCanvas = document.getElementById("particle-canvas");
   const context = particleCanvas.getContext("2d");
   const particles = [];
-  const particleCount = 56;
+  const particleCount = 34;
 
   function resizeCanvas() {
     particleCanvas.width = window.innerWidth;
@@ -108,13 +108,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return {
       x: Math.random() * particleCanvas.width,
       y: Math.random() * particleCanvas.height,
-      radius: Math.random() * 2.2 + 0.7,
-      speedX: (Math.random() - 0.5) * 0.12,
-      speedY: -(Math.random() * 0.18 + 0.06),
-      alpha: Math.random() * 0.55 + 0.22,
+      radius: Math.random() * 2 + 0.7,
+      speedX: (Math.random() - 0.5) * 0.08,
+      speedY: -(Math.random() * 0.12 + 0.04),
+      alpha: Math.random() * 0.35 + 0.14,
       pulse: Math.random() * Math.PI * 2,
-      drift: Math.random() * 0.8 + 0.2,
-      trail: Math.random() > 0.72,
+      drift: Math.random() * 0.5 + 0.15,
+      trail: Math.random() > 0.88,
       cool: Math.random() > 0.5,
     };
   }
@@ -132,10 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const time = performance.now() * 0.001;
 
     particles.forEach((particle) => {
-      particle.pulse += 0.018;
-      particle.x += particle.speedX + Math.sin(time + particle.pulse) * particle.drift * 0.16;
-      particle.y += particle.speedY - Math.cos(time * 0.9 + particle.pulse) * 0.03;
-      const glow = 0.7 + Math.sin(time * 2 + particle.pulse) * 0.3;
+      particle.pulse += 0.012;
+      particle.x += particle.speedX + Math.sin(time + particle.pulse) * particle.drift * 0.08;
+      particle.y += particle.speedY - Math.cos(time * 0.85 + particle.pulse) * 0.02;
+      const glow = 0.78 + Math.sin(time * 1.4 + particle.pulse) * 0.14;
 
       if (particle.x < -20) particle.x = particleCanvas.width + 20;
       if (particle.x > particleCanvas.width + 20) particle.x = -20;
@@ -154,33 +154,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (particle.trail) {
         context.beginPath();
         context.strokeStyle = particle.cool
-          ? `rgba(0, 255, 159, ${particle.alpha * 0.22})`
-          : `rgba(230, 230, 230, ${particle.alpha * 0.16})`;
+          ? `rgba(0, 255, 159, ${particle.alpha * 0.14})`
+          : `rgba(230, 230, 230, ${particle.alpha * 0.12})`;
         context.lineWidth = 1;
         context.moveTo(particle.x, particle.y);
         context.lineTo(particle.x - particle.speedX * 18, particle.y - particle.speedY * 18);
         context.stroke();
       }
     });
-
-    for (let i = 0; i < particles.length; i += 1) {
-      for (let j = i + 1; j < particles.length; j += 1) {
-        const first = particles[i];
-        const second = particles[j];
-        const dx = first.x - second.x;
-        const dy = first.y - second.y;
-        const distance = Math.hypot(dx, dy);
-
-        if (distance < 120) {
-          context.beginPath();
-          context.strokeStyle = `rgba(0, 245, 255, ${0.1 - distance / 1500})`;
-          context.lineWidth = 1;
-          context.moveTo(first.x, first.y);
-          context.lineTo(second.x, second.y);
-          context.stroke();
-        }
-      }
-    }
 
     requestAnimationFrame(drawParticles);
   }
