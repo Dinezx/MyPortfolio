@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+  const loader = document.querySelector(".loader");
   const navToggle = document.querySelector(".nav-toggle");
   const topbar = document.querySelector(".topbar");
   const navLinks = document.querySelectorAll(".nav a");
@@ -172,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     drawParticles();
     typeLoop();
     body.classList.add("is-loaded");
+    loader?.remove();
   }
 
   window.addEventListener("resize", () => {
