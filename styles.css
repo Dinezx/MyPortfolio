@@ -462,41 +462,35 @@ main {
   margin-top: 0;
 }
 
-.skill-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.1rem 0 0;
-  display: grid;
-  gap: 1rem;
+.skill-block__note {
+  margin: 0.55rem 0 1.05rem;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
-.skill-list li {
-  display: grid;
-  gap: 0.55rem;
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.skill-list span {
-  color: rgba(243, 246, 255, 0.95);
-  font-size: 0.95rem;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 0.65rem;
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.72rem 1rem;
   border-radius: 999px;
-  background: rgba(230, 230, 230, 0.08);
-  overflow: hidden;
+  color: var(--text);
+  border: 1px solid rgba(0, 245, 255, 0.14);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(138, 43, 226, 0.06));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  letter-spacing: 0.01em;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
-.skill-bar i {
-  display: block;
-  width: var(--value);
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 12px rgba(0, 245, 255, 0.22);
-  transform-origin: left;
-  animation: fillBar 1.4s ease both;
+.skill-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 245, 255, 0.34);
+  box-shadow: 0 10px 24px rgba(0, 245, 255, 0.08);
 }
 
 .timeline {
@@ -708,6 +702,10 @@ textarea:focus {
   .project-card p {
     min-height: auto;
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -769,6 +767,10 @@ textarea:focus {
   .glass-panel,
   .glass-card--hero {
     padding: 1.1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero__avatar {
