@@ -7,7 +7,7 @@
   <meta name="description" content="Premium personal portfolio for Dinesh Kumar S, an AI student, data analyst, and Microsoft technologist." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,19 +16,48 @@
   <div class="ambient ambient--two" aria-hidden="true"></div>
 
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Go to home">Dinesh</a>
-    <nav class="nav">
+    <a class="brand topbar__brand" href="#home" aria-label="Go to home">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">Dinesh</span>
+    </a>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+    <a class="topbar__cta" href="#contact">Let’s talk</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="side-panel">
       <span></span>
       <span></span>
     </button>
   </header>
+
+  <aside class="side-panel" id="side-panel" aria-hidden="true">
+    <div class="side-panel__inner">
+      <div class="side-panel__header">
+        <span class="side-panel__title">Navigate</span>
+        <button class="side-panel__close" type="button" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="side-panel__nav" aria-label="Site">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="side-panel__cta">
+        <a class="side-panel__button" href="#contact">Let’s talk</a>
+      </div>
+    </div>
+  </aside>
+  <button class="side-panel__overlay" type="button" aria-label="Close menu"></button>
 
   <main>
     <section class="hero section hero--reference" id="home">
@@ -50,7 +79,7 @@
         <div class="hero-shell__grid">
           <div class="hero-shell__copy">
             <p class="hero-shell__eyebrow">AI Student • Data Analyst • Microsoft Technologist</p>
-            <h1>HI, I’M DINESH.<br />A CREATIVE <span>ANALYTICS</span> BUILDER BASED IN INDIA</h1>
+            <h1>HI, I’M <span class="text-glow">DINESH</span>.<br />A CREATIVE <span class="text-glow">ANALYTICS</span> BUILDER BASED IN INDIA</h1>
             <p class="hero-shell__roles">DATA ANALYSIS * AUTOMATION * AI SYSTEMS</p>
             <p class="hero-shell__tagline">I build intelligent systems, automate workflows, and turn data into clean business insight using Microsoft technologies, Python, and cloud platforms.</p>
             <div class="hero-shell__actions">
@@ -81,7 +110,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="about">
+    <section class="section section--paper reveal" id="about">
       <div class="section__heading">
         <span class="section__label">About</span>
         <h2>Engineering-focused, business-aware, and automation-first.</h2>
@@ -91,7 +120,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="skills">
+    <section class="section section--paper reveal" id="skills">
       <div class="section__heading">
         <span class="section__label">Capabilities</span>
         <h2>Grouped capability clusters across data, automation, cloud, and delivery.</h2>
@@ -161,7 +190,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="experience">
+    <section class="section section--paper reveal" id="experience">
       <div class="section__heading">
         <span class="section__label">Experience</span>
         <h2>Delivery, automation, and client-facing impact.</h2>
@@ -205,7 +234,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="projects">
+    <section class="section section--paper reveal" id="projects">
       <div class="section__heading">
         <span class="section__label">Projects</span>
         <h2>Practical systems with business value and technical clarity.</h2>
@@ -244,7 +273,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="services">
+    <section class="section section--paper reveal" id="services">
       <div class="section__heading">
         <span class="section__label">Services</span>
         <h2>Focused services for analytics, automation, and product delivery.</h2>
@@ -257,7 +286,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="contact">
+    <section class="section section--paper reveal" id="contact">
       <div class="section__heading">
         <span class="section__label">Contact</span>
         <h2>Open to freelance opportunities, internships, and collaborations.</h2>

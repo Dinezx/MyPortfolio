@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".loader");
   const navToggle = document.querySelector(".nav-toggle");
   const topbar = document.querySelector(".topbar");
-  const navLinks = document.querySelectorAll(".nav a");
+  const sidePanel = document.querySelector(".side-panel");
+  const sidePanelOverlay = document.querySelector(".side-panel__overlay");
+  const sidePanelClose = document.querySelector(".side-panel__close");
+  const navLinks = document.querySelectorAll(".side-panel__nav a");
   const typingText = document.getElementById("typing-text");
   const scrollTopButton = document.getElementById("scroll-top");
   const resumeButton = document.getElementById("resume-btn");
@@ -60,15 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTopButton.classList.toggle("is-visible", shouldShow);
   }
 
+  function setPanelState(isOpen) {
+    document.body.classList.toggle("is-panel-open", isOpen);
+    sidePanel?.setAttribute("aria-hidden", String(!isOpen));
+    navToggle?.setAttribute("aria-expanded", String(isOpen));
+  }
+
   navToggle?.addEventListener("click", () => {
-    const expanded = topbar.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(expanded));
+    const shouldOpen = !document.body.classList.contains("is-panel-open");
+    setPanelState(shouldOpen);
   });
+
+  sidePanelOverlay?.addEventListener("click", () => setPanelState(false));
+  sidePanelClose?.addEventListener("click", () => setPanelState(false));
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      topbar.classList.remove("is-open");
-      navToggle?.setAttribute("aria-expanded", "false");
+      setPanelState(false);
     });
   });
 
