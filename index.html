@@ -7,14 +7,11 @@
   <meta name="description" content="Premium personal portfolio for Dinesh Kumar S, an AI student, data analyst, and Microsoft technologist." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
-  <div class="ambient ambient--one" aria-hidden="true"></div>
-  <div class="ambient ambient--two" aria-hidden="true"></div>
-
+  <div class="page-shell">
   <header class="topbar">
     <a class="brand topbar__brand" href="#home" aria-label="Go to home">
       <span class="brand__dot" aria-hidden="true"></span>
@@ -62,50 +59,51 @@
   <main>
     <section class="hero section hero--reference" id="home">
       <div class="hero-shell reveal">
-        <div class="hero-shell__top">
-          <a class="hero-shell__brand" href="#home" aria-label="Go to home">
-            <span class="hero-shell__brand-mark"></span>
-            <span class="hero-shell__brand-text">Dinesh</span>
-          </a>
-          <nav class="hero-shell__nav" aria-label="Primary">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Works</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <a class="hero-shell__talk" href="#contact">Let's talk</a>
-        </div>
-
-        <div class="hero-shell__grid">
+        <div class="hero-shell__grid hero-shell__grid--next">
           <div class="hero-shell__copy">
-            <p class="hero-shell__eyebrow">AI Student • Data Analyst • Microsoft Technologist</p>
-            <h1>HI, I’M <span class="text-glow">DINESH</span>.<br />A CREATIVE <span class="text-glow">ANALYTICS</span> BUILDER BASED IN INDIA</h1>
-            <p class="hero-shell__roles">DATA ANALYSIS * AUTOMATION * AI SYSTEMS</p>
-            <p class="hero-shell__tagline">I build intelligent systems, automate workflows, and turn data into clean business insight using Microsoft technologies, Python, and cloud platforms.</p>
+            <p class="hero-shell__eyebrow">AI Student · Data Analyst · Microsoft Technologist</p>
+            <h1>I’M <span class="hero-shell__name">DINESH</span></h1>
+            <p class="hero-shell__roles">A visionary data & automation builder based in India.</p>
+            <p class="hero-shell__tagline">I design intelligent systems, automate business workflows, and turn complex data into clear insight using Microsoft technologies, Python, and cloud platforms.</p>
             <div class="hero-shell__actions">
-              <a class="hero-shell__button hero-shell__button--dark" href="#projects">Got a project?</a>
-              <button class="hero-shell__button" id="resume-btn" type="button">Let's talk.</button>
+              <a class="hero-shell__button hero-shell__button--dark" href="#projects">View work</a>
+              <button class="hero-shell__button" id="resume-btn" type="button">Download resume</button>
+            </div>
+            <div class="hero-shell__stats">
+              <div>
+                <span>Projects</span>
+                <strong>12+</strong>
+              </div>
+              <div>
+                <span>Clients</span>
+                <strong>8+</strong>
+              </div>
+              <div>
+                <span>Years</span>
+                <strong>3+</strong>
+              </div>
             </div>
           </div>
 
-          <div class="hero-shell__portrait-wrap">
-            <div class="hero-shell__glyph hero-shell__glyph--top"></div>
-            <div class="hero-shell__glyph hero-shell__glyph--mid"></div>
-            <div class="hero-shell__glyph hero-shell__glyph--right"></div>
-            <div class="hero-shell__portrait-frame">
-              <img class="hero-shell__portrait" src="file:///E:/My%20Documents/Photo%201.jpg" alt="Portrait of Dinesh Kumar S" />
+          <div class="hero-shell__visual">
+            <div class="hero-shell__card">
+              <div class="hero-shell__card-media">
+                <img class="hero-shell__portrait" src="file:///E:/My%20Documents/Photo%201.jpg" alt="Portrait of Dinesh Kumar S" />
+              </div>
+              <div class="hero-shell__card-footer">
+                <span>Data & Automation</span>
+                <span>Product Systems</span>
+              </div>
+            </div>
+            <div class="hero-shell__mini">
+              <h4>Capabilities</h4>
+              <p>Analytics dashboards, Power Platform builds, API services, cloud automation.</p>
+            </div>
+            <div class="hero-shell__mini hero-shell__mini--dark">
+              <h4>Currently</h4>
+              <p>Leading delivery for global clients while mentoring student engineers.</p>
             </div>
           </div>
-        </div>
-
-        <div class="hero-shell__ticker" aria-hidden="true">
-          <span>DATA ANALYSIS</span>
-          <span>BRANDING</span>
-          <span>DEVELOPMENT</span>
-          <span>STRATEGY</span>
-          <span>PRODUCT DESIGN</span>
-          <span>MOTION GRAPHIC</span>
-          <span>ART DIRECTION</span>
         </div>
       </div>
     </section>
@@ -326,6 +324,8 @@
       </div>
     </section>
   </main>
+
+  </div>
 
   <button class="scroll-top" id="scroll-top" type="button" aria-label="Scroll to top">↑</button>
 
